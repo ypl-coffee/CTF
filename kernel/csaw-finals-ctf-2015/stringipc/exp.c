@@ -19,7 +19,7 @@
 
 #define SEEK_SET	0
 
-typedef unsigned long loff_t;
+//typedef unsigned long loff_t;
 
 struct alloc_channel_args {
     size_t buf_size;

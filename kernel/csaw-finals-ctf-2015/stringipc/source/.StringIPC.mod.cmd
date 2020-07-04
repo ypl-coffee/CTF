@@ -1,0 +1,1 @@
+cmd_/home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/StringIPC.mod := { echo  /home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/main.o; echo; } > /home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/StringIPC.mod

@@ -1,0 +1,1 @@
+cmd_/home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/modules.order := {   echo /home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/StringIPC.ko; :; } | awk '!x[$$0]++' - > /home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/modules.order

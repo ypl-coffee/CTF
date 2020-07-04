@@ -1,0 +1,1 @@
+cmd_/home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/StringIPC.o := ld -m elf_x86_64  -z max-page-size=0x200000    -r -o /home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/StringIPC.o /home/peilin/ctf/kernel/csaw-finals-ctf-2015/stringipc/source/main.o
